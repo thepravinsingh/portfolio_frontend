@@ -102,7 +102,7 @@ export default function Navbar() {
             </Link>
           ))}
           <a
-            href="https://ik.imagekit.io/imagesdatahai/Praveen%20Details/Praveen_Resume%20(1).pdf"
+            href="https://ik.imagekit.io/imagesdatahai/Praveen%20Details/Praveen_Resume%20(2).pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="btn-primary ml-4"
@@ -169,7 +169,7 @@ export default function Navbar() {
             </Link>
           ))}
           <a
-            href="https://ik.imagekit.io/imagesdatahai/Praveen%20Details/Praveen_Resume%20(1).pdf"
+            href="https://ik.imagekit.io/imagesdatahai/Praveen%20Details/Praveen_Resume%20(2).pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="btn-primary mt-4"

@@ -114,7 +114,7 @@ export default function Main() {
             Get In Touch
           </Link>
           <a
-            href="https://ik.imagekit.io/imagesdatahai/Praveen%20Details/Praveen_Resume%20(1).pdf"
+            href="https://ik.imagekit.io/imagesdatahai/Praveen%20Details/Praveen_Resume%20(2).pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="btn-primary"
