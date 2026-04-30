@@ -31,8 +31,9 @@ export default function Contact() {
     setLoading(true);
     setError("");
     try {
+      const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:4000";
       const response = await axios.post(
-        "http://localhost:4000/api/contact",
+        `${apiUrl}/api/contact`,
         formData,
         {
           headers: { "Content-Type": "application/json" },
