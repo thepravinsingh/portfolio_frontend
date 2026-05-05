@@ -187,16 +187,14 @@ export default function Main() {
         {/* Profile Image */}
         <div 
           ref={imageRef}
-          className="relative order-1 lg:order-2 flex justify-center items-center"
+          className="relative order-1 lg:order-2 hidden lg:flex justify-center items-center"
           style={{
             opacity: 0,
             transform: "scale(0.9)",
             transition: "all 1s cubic-bezier(0.16, 1, 0.3, 1)",
           }}
         >
-          <div className="relative w-80 h-80 md:w-80 md:h-80 lg:w-[420px] lg:h-[420px] group">
-            {/* Background Effects */}
-          
+          <div className="relative w-[280px] h-[280px] sm:w-80 sm:h-80 lg:w-[420px] lg:h-[420px] group">
             {/* Image Container */}
             <div className="relative w-full h-full">
               <Image
@@ -210,10 +208,10 @@ export default function Main() {
 
             {/* Float Element */}
             <div 
-              className="absolute -bottom-4 -right-4 bg-[var(--bg-tertiary)] border border-[var(--glass-border)] px-4 py-2 rounded-lg shadow-xl hidden md:flex items-center gap-2 animate-[float_4s_ease-in-out_infinite]"
+              className="absolute -bottom-2 -right-2 sm:-bottom-4 sm:-right-4 bg-[var(--bg-tertiary)] border border-[var(--glass-border)] px-3 py-1.5 sm:px-4 sm:py-2 rounded-lg shadow-xl flex items-center gap-2 animate-[float_4s_ease-in-out_infinite]"
             >
               <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
-              <span className="text-xs font-mono text-[var(--text-secondary)]">Available for work</span>
+              <span className="text-[10px] sm:text-xs font-mono text-[var(--text-secondary)]">Available for work</span>
             </div>
           </div>
         </div>
