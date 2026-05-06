@@ -68,11 +68,11 @@ export default function Main() {
         }}
       />
 
-      <div className="w-full max-w-[1200px] mx-auto  flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-8">
+      <div className="w-full max-w-[1200px] mx-auto flex flex-col lg:flex-row items-center justify-between gap-10 lg:gap-8 px-6 lg:px-8">
         {/* Text Content */}
         <div
           ref={heroRef}
-          className="relative w-full lg:w-[60%] flex flex-col gap-5 order-2 lg:order-1"
+          className="relative w-full lg:w-[60%] flex flex-col gap-5 order-1"
           style={{
             opacity: 0,
             transform: "translateY(30px)",
@@ -102,17 +102,19 @@ export default function Main() {
           </p>
 
           {/* Name */}
-          <h1 className="gradient-text font-extrabold tracking-tight text-[3rem]">Praveen Singh.</h1>
+          <h1 className="gradient-text font-extrabold tracking-tight text-4xl sm:text-5xl md:text-6xl lg:text-[3rem]">
+            Praveen Singh.
+          </h1>
 
           {/* Tagline */}
-          <h2 className="font-bold text-slate-300 text-[2rem]" style={{ marginTop: "-4px" }}>
+          <h2 className="font-bold text-slate-300 text-2xl sm:text-3xl md:text-4xl lg:text-[2rem]" style={{ marginTop: "-4px" }}>
             Full Stack Developer — Building the web, better.
           </h2>
 
           {/* Summary */}
           <p
-            className="max-w-[540px] font-normal"
-            style={{ lineHeight: "1.8", fontSize: "1rem" }}
+            className="max-w-[540px] font-normal text-sm sm:text-base"
+            style={{ lineHeight: "1.8" }}
           >
             Full Stack Developer with 2+ years of production experience in React,
             Next.js 14, NestJS, TypeScript, Node.js, MongoDB, Redis, WebSockets,
@@ -187,14 +189,14 @@ export default function Main() {
         {/* Profile Image */}
         <div 
           ref={imageRef}
-          className="relative order-1 lg:order-2 flex justify-center items-center "
+          className="relative order-2 flex justify-center items-center"
           style={{
             opacity: 0,
             transform: "scale(0.9)",
             transition: "all 1s cubic-bezier(0.16, 1, 0.3, 1)",
           }}
         >
-          <div className="relative w-[260px] h-[260px] sm:w-[320px] sm:h-[320px] lg:w-[450px] lg:h-[450px] group">
+          <div className="relative w-[240px] h-[240px] sm:w-[300px] sm:h-[300px] lg:w-[450px] lg:h-[450px] group">
             {/* Image Container */}
             <div className="relative w-full h-full">
               <Image
