@@ -68,11 +68,11 @@ export default function Main() {
         }}
       />
 
-      <div className="w-full flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-8">
+      <div className="w-full max-w-[1200px] mx-auto  flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-8">
         {/* Text Content */}
         <div
           ref={heroRef}
-          className="relative w-full max-w-[1200px] flex flex-col gap-5 order-2 lg:order-1"
+          className="relative w-full lg:w-[60%] flex flex-col gap-5 order-2 lg:order-1"
           style={{
             opacity: 0,
             transform: "translateY(30px)",
@@ -82,7 +82,7 @@ export default function Main() {
         >
           {/* Location */}
           <div
-            className="flex items-center gap-2 text-sm"
+            className="flex items-center gap-2 text-sm font-medium"
             style={{ color: "var(--accent)", fontFamily: "var(--font-mono)" }}
           >
             <FiMapPin size={14} />
@@ -91,7 +91,7 @@ export default function Main() {
 
           {/* Greeting */}
           <p
-            className="text-base md:text-lg"
+            className="text-base md:text-lg font-medium"
             style={{
               color: "var(--accent)",
               fontFamily: "var(--font-mono)",
@@ -102,17 +102,17 @@ export default function Main() {
           </p>
 
           {/* Name */}
-          <h1 className="gradient-text">Praveen Singh.</h1>
+          <h1 className="gradient-text font-extrabold tracking-tight text-[3rem]">Praveen Singh.</h1>
 
           {/* Tagline */}
-          <h2 style={{ marginTop: "-4px" }}>
+          <h2 className="font-bold text-slate-300 text-[2rem]" style={{ marginTop: "-4px" }}>
             Full Stack Developer — Building the web, better.
           </h2>
 
           {/* Summary */}
           <p
-            className="max-w-[600px]"
-            style={{ lineHeight: "1.85", fontSize: "1rem" }}
+            className="max-w-[540px] font-normal"
+            style={{ lineHeight: "1.8", fontSize: "1rem" }}
           >
             Full Stack Developer with 2+ years of production experience in React,
             Next.js 14, NestJS, TypeScript, Node.js, MongoDB, Redis, WebSockets,
@@ -126,15 +126,15 @@ export default function Main() {
             <Link href="#contact" className="btn-filled">
               Get In Touch
             </Link>
-            <a
-              href="https://ik.imagekit.io/imagesdatahai/Praveen%20Details/Praveen_Resume%20(2).pdf?updatedAt=1777575299656"
+            <Link
+              href="https://ik.imagekit.io/imagesdatahai/Praveen%20Details/Praveen_Resume%20(4).pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="btn-primary"
             >
               View Resume
               <FiExternalLink size={14} />
-            </a>
+            </Link>
           </div>
 
           {/* Social Links */}
@@ -187,23 +187,31 @@ export default function Main() {
         {/* Profile Image */}
         <div 
           ref={imageRef}
-          className="relative order-1 lg:order-2 hidden lg:flex justify-center items-center"
+          className="relative order-1 lg:order-2 flex justify-center items-center "
           style={{
             opacity: 0,
             transform: "scale(0.9)",
             transition: "all 1s cubic-bezier(0.16, 1, 0.3, 1)",
           }}
         >
-          <div className="relative w-[250px] h-[250px] sm:w-80 sm:h-80 lg:w-[600px] lg:h-[600px] group">
+          <div className="relative w-[260px] h-[260px] sm:w-[320px] sm:h-[320px] lg:w-[450px] lg:h-[450px] group">
             {/* Image Container */}
             <div className="relative w-full h-full">
               <Image
-                src="https://ik.imagekit.io/imagesdatahai/Praveen%20Details/praveen.png?updatedAt=1778044331460"
+                src="https://ik.imagekit.io/imagesdatahai/Praveen%20Details/praveen.png"
                 alt="Praveen Singh"
                 fill
-                className="object-cover object-top scale-110 group-hover:scale-115 transition-transform duration-700 ease-out"
+                className="object-contain scale-110 group-hover:scale-115 transition-transform duration-700 ease-out"
                 priority
               />
+            </div>
+
+            {/* Float Element */}
+            <div 
+              className="absolute -bottom-2 -right-2 sm:-bottom-4 sm:-right-4 bg-[var(--bg-tertiary)] border border-[var(--glass-border)] px-3 py-1.5 sm:px-4 sm:py-2 rounded-lg shadow-xl flex items-center gap-2 animate-[float_4s_ease-in-out_infinite] z-10"
+            >
+              <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
+              <span className="text-[10px] sm:text-xs font-mono text-[var(--text-secondary)]">Available for work</span>
             </div>
           </div>
         </div>
