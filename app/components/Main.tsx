@@ -194,7 +194,7 @@ export default function Main() {
             transition: "all 1s cubic-bezier(0.16, 1, 0.3, 1)",
           }}
         >
-          <div className="relative w-[400px] h-[400px] sm:w-80 sm:h-80 lg:w-[600px] lg:h-[600px] group">
+          <div className="relative w-[250px] h-[250px] sm:w-80 sm:h-80 lg:w-[600px] lg:h-[600px] group">
             {/* Image Container */}
             <div className="relative w-full h-full">
               <Image
@@ -204,14 +204,6 @@ export default function Main() {
                 className="object-cover object-top scale-110 group-hover:scale-115 transition-transform duration-700 ease-out"
                 priority
               />
-            </div>
-
-            {/* Float Element */}
-            <div 
-              className="absolute -bottom-2 -right-2 sm:-bottom-4 sm:-right-4 bg-[var(--bg-tertiary)] border border-[var(--glass-border)] px-3 py-1.5 sm:px-4 sm:py-2 rounded-lg shadow-xl flex items-center gap-2 animate-[float_4s_ease-in-out_infinite]"
-            >
-              <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
-              <span className="text-[10px] sm:text-xs font-mono text-[var(--text-secondary)]">Available for work</span>
             </div>
           </div>
         </div>
