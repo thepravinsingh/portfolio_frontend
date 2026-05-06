@@ -127,7 +127,7 @@ export default function Main() {
               Get In Touch
             </Link>
             <a
-              href="https://ik.imagekit.io/imagesdatahai/Praveen%20Details/praveen.png?updatedAt=1778044331460"
+              href="https://ik.imagekit.io/imagesdatahai/Praveen%20Details/Praveen_Resume%20(2).pdf?updatedAt=1777575299656"
               target="_blank"
               rel="noopener noreferrer"
               className="btn-primary"
@@ -198,7 +198,7 @@ export default function Main() {
             {/* Image Container */}
             <div className="relative w-full h-full">
               <Image
-                src="https://ik.imagekit.io/imagesdatahai/Praveen%20Details/praveen_singh_bg-remove_image"
+                src="https://ik.imagekit.io/imagesdatahai/Praveen%20Details/praveen.png?updatedAt=1778044331460"
                 alt="Praveen Singh"
                 fill
                 className="object-cover object-top scale-110 group-hover:scale-115 transition-transform duration-700 ease-out"
