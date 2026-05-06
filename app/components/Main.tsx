@@ -107,7 +107,7 @@ export default function Main() {
           </h1>
 
           {/* Tagline */}
-          <h2 className="font-bold text-slate-300 text-2xl sm:text-3xl md:text-4xl lg:text-[2rem]" style={{ marginTop: "-4px" }}>
+          <h2 className="font-bold text-slate-300 text-2xl sm:text-3xl md:text-4xl lg:text-[2rem] mt-1" style={{ marginTop: "-4px" }}>
             Full Stack Developer — Building the web, better.
           </h2>
 
