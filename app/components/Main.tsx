@@ -194,7 +194,7 @@ export default function Main() {
             transition: "all 1s cubic-bezier(0.16, 1, 0.3, 1)",
           }}
         >
-          <div className="relative w-[400px] h-[400px] sm:w-80 sm:h-80 lg:w-[420px] lg:h-[420px] group">
+          <div className="relative w-[400px] h-[400px] sm:w-80 sm:h-80 lg:w-[600px] lg:h-[600px] group">
             {/* Image Container */}
             <div className="relative w-full h-full">
               <Image
