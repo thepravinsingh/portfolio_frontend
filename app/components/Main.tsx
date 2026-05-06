@@ -36,7 +36,7 @@ export default function Main() {
   return (
     <section
       id="hero"
-      className="relative flex items-center py-5 md:py-8"
+      className="relative flex items-center py-2 md:py-4"
       aria-label="Hero section"
       style={{ minHeight: "calc(100vh - 72px)" }}
     >
@@ -68,7 +68,7 @@ export default function Main() {
         }}
       />
 
-      <div className="w-full max-w-[1200px] mx-auto flex flex-col lg:flex-row items-center justify-between gap-10 lg:gap-8 px-6 lg:px-8">
+      <div className="w-full max-w-[1200px] mx-auto flex flex-col lg:flex-row items-center justify-between gap-5">
         {/* Text Content */}
         <div
           ref={heroRef}
