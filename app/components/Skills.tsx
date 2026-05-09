@@ -45,33 +45,35 @@ const skillCategories = [
 export default function Skills() {
   return (
     <section id="skills" className="section-container" aria-label="Technical skills">
-      <h2 className="section-title">
-        <span className="section-label">03.</span> Technical Skills
-      </h2>
+      <div className="layout-container">
+        <h2 className="section-title">
+          <span className="section-label">03.</span> Technical Skills
+        </h2>
 
-      <div className="grid gap-8">
-        {skillCategories.map((category) => (
-          <div key={category.title} className="glass-card p-6 md:p-8" style={{ cursor: "default" }}>
-            <h3
-              className="text-sm font-semibold uppercase tracking-wider mb-5"
-              style={{
-                color: "var(--accent)",
-                fontFamily: "var(--font-mono)",
-                fontSize: "0.8rem",
-                letterSpacing: "0.1em",
-              }}
-            >
-              {category.title}
-            </h3>
-            <div className="flex flex-wrap gap-3">
-              {category.skills.map((skill) => (
-                <span key={skill} className="skill-pill">
-                  {skill}
-                </span>
-              ))}
+        <div className="grid gap-8">
+          {skillCategories.map((category) => (
+            <div key={category.title} className="glass-card p-6 md:p-8" style={{ cursor: "default" }}>
+              <h3
+                className="text-sm font-semibold uppercase tracking-wider mb-5"
+                style={{
+                  color: "var(--accent)",
+                  fontFamily: "var(--font-mono)",
+                  fontSize: "0.8rem",
+                  letterSpacing: "0.1em",
+                }}
+              >
+                {category.title}
+              </h3>
+              <div className="flex flex-wrap gap-3">
+                {category.skills.map((skill) => (
+                  <span key={skill} className="skill-pill">
+                    {skill}
+                  </span>
+                ))}
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </section>
   );

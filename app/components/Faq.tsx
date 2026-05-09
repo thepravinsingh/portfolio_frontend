@@ -26,31 +26,33 @@ export default function Faq() {
 
   return (
     <section id="faq" className="section-container" aria-label="Frequently Asked Questions">
-      <h2 className="section-title">
-        <span className="section-label">08.</span> Common Questions
-      </h2>
+      <div className="layout-container">
+        <h2 className="section-title">
+          <span className="section-label">08.</span> Common Questions
+        </h2>
 
-      <div className="max-w-[800px] flex flex-col gap-4">
-        {faqs.map((faq, index) => (
-          <div key={index} className="glass-card overflow-hidden">
-            <button
-              onClick={() => setOpenIndex(openIndex === index ? null : index)}
-              className="w-full flex items-center justify-between p-6 text-left hover:bg-[var(--accent-dim)] transition-colors duration-300"
-            >
-              <span className="text-lg font-semibold text-[var(--text-heading)]">{faq.question}</span>
-              {openIndex === index ? <FiMinus className="text-[var(--accent)]" /> : <FiPlus className="text-[var(--accent)]" />}
-            </button>
-            <div
-              className={`transition-all duration-300 ease-in-out ${
-                openIndex === index ? "max-h-[200px] opacity-100 p-6 pt-0" : "max-h-0 opacity-0 pointer-events-none"
-              }`}
-            >
-              <p className="text-[var(--text-secondary)] leading-relaxed">
-                {faq.answer || faq.entry}
-              </p>
+        <div className="max-w-[800px] flex flex-col gap-4">
+          {faqs.map((faq, index) => (
+            <div key={index} className="glass-card overflow-hidden">
+              <button
+                onClick={() => setOpenIndex(openIndex === index ? null : index)}
+                className="w-full flex items-center justify-between p-6 text-left hover:bg-[var(--accent-dim)] transition-colors duration-300"
+              >
+                <span className="text-lg font-semibold text-[var(--text-heading)]">{faq.question}</span>
+                {openIndex === index ? <FiMinus className="text-[var(--accent)]" /> : <FiPlus className="text-[var(--accent)]" />}
+              </button>
+              <div
+                className={`transition-all duration-300 ease-in-out ${
+                  openIndex === index ? "max-h-[200px] opacity-100 p-6 pt-0" : "max-h-0 opacity-0 pointer-events-none"
+                }`}
+              >
+                <p className="text-[var(--text-secondary)] leading-relaxed">
+                  {faq.answer || faq.entry}
+                </p>
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </section>
   );

@@ -14,17 +14,15 @@ export default function Home() {
       className="flex flex-col"
       style={{ paddingTop: "72px" }}
     >
-      <div className="px-5 sm:px-8 md:px-12 lg:px-20 xl:px-32">
-        <Main />
-        <AboutMe />
-        <Experience />
-        <Skills />
-        <Services />
-        <Projects />
-        <Education />
-        <Contact />
-        <Faq />
-      </div>
+      <Main />
+      <AboutMe />
+      <Experience />
+      <Skills />
+      <Services />
+      <Projects />
+      <Education />
+      <Contact />
+      <Faq />
     </div>
   );
 }

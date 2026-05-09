@@ -49,6 +49,8 @@
 /* ===== BASE RESET ===== */
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 html {
@@ -101,13 +103,44 @@ p {
   color: var(--text-secondary);
 }
 
-/* ===== SECTION STYLES ===== */
-.section-container {
-  max-width: 1100px;
+/* ===== LAYOUT & CONTAINERS ===== */
+.layout-container {
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 30px 0;
+  padding-left: 24px;
+  padding-right: 24px;
+  width: 100%;
 }
 
+@media (min-width: 768px) {
+  .layout-container {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .layout-container {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+}
+
+/* Compact section vertical spacing */
+.section-container {
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+@media (min-width: 768px) {
+  .section-container {
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+}
+
+
+/* ===== SECTION DECORATIONS ===== */
 .section-label {
   font-family: var(--font-mono);
   font-size: clamp(0.85rem, 1.2vw, 1rem);
@@ -121,7 +154,7 @@ p {
   font-size: clamp(1.5rem, 3vw, 2rem);
   font-weight: 700;
   color: var(--text-heading);
-  margin-bottom: 40px;
+  margin-bottom: 20px;
   display: flex;
   align-items: center;
   gap: 16px;
@@ -419,17 +452,7 @@ p {
 
 /* ===== RESPONSIVE HELPERS ===== */
 @media (max-width: 768px) {
-  .section-container {
-    padding: 50px 0;
-  }
-  
   .section-title::after {
     max-width: 100px;
-  }
-}
-
-@media (max-width: 480px) {
-  .section-container {
-    padding: 40px 0;
   }
 }

@@ -31,31 +31,33 @@ const services = [
 export default function Services() {
   return (
     <section id="services" className="section-container" aria-label="Professional Services">
-      <h2 className="section-title">
-        <span className="section-label">04.</span> Technical Expertise
-      </h2>
+      <div className="layout-container">
+        <h2 className="section-title">
+          <span className="section-label">04.</span> Technical Expertise
+        </h2>
 
-      <div className="grid md:grid-cols-2 gap-6">
-        {services.map((service, index) => (
-          <article key={index} className="glass-card p-6 md:p-8 flex flex-col gap-4">
-            <div className="flex items-center gap-4">
-              <div className="w-12 h-12 rounded-lg flex items-center justify-center bg-[var(--accent-dim)] text-[var(--accent)] border border-[var(--glass-border)]">
-                <service.icon size={24} />
+        <div className="grid md:grid-cols-2 gap-6">
+          {services.map((service, index) => (
+            <article key={index} className="glass-card p-6 md:p-8 flex flex-col gap-4">
+              <div className="flex items-center gap-4">
+                <div className="w-12 h-12 rounded-lg flex items-center justify-center bg-[var(--accent-dim)] text-[var(--accent)] border border-[var(--glass-border)]">
+                  <service.icon size={24} />
+                </div>
+                <h3 className="text-xl font-bold text-[var(--text-heading)]">{service.title}</h3>
               </div>
-              <h3 className="text-xl font-bold text-[var(--text-heading)]">{service.title}</h3>
-            </div>
-            <p className="text-[var(--text-secondary)] leading-relaxed">
-              {service.description}
-            </p>
-            <div className="flex flex-wrap gap-2 mt-2">
-              {service.keywords.map(kw => (
-                <span key={kw} className="text-[10px] uppercase tracking-widest font-mono text-[var(--accent)] opacity-70">
-                  #{kw.replace(/\s+/g, '')}
-                </span>
-              ))}
-            </div>
-          </article>
-        ))}
+              <p className="text-[var(--text-secondary)] leading-relaxed">
+                {service.description}
+              </p>
+              <div className="flex flex-wrap gap-2 mt-2">
+                {service.keywords.map(kw => (
+                  <span key={kw} className="text-[10px] uppercase tracking-widest font-mono text-[var(--accent)] opacity-70">
+                    #{kw.replace(/\s+/g, '')}
+                  </span>
+                ))}
+              </div>
+            </article>
+          ))}
+        </div>
       </div>
     </section>
   );

@@ -82,122 +82,124 @@ const projectsData: Project[] = [
 export default function Projects() {
   return (
     <section id="projects" className="section-container" aria-label="Key projects">
-      <h2 className="section-title">
-        <span className="section-label">05.</span> Key Projects
-      </h2>
+      <div className="layout-container">
+        <h2 className="section-title">
+          <span className="section-label">05.</span> Key Projects
+        </h2>
 
-      <div className="grid gap-6">
-        {projectsData.map((project, index) => (
-          <article
-            key={index}
-            className={`glass-card p-6 md:p-8 ${
-              project.featured
-                ? "border-[var(--glass-border-hover)]"
-                : ""
-            }`}
-            style={
-              project.featured
-                ? {
-                    background:
-                      "linear-gradient(135deg, rgba(100,255,218,0.04) 0%, rgba(124,58,237,0.04) 100%)",
-                    borderColor: "var(--glass-border-hover)",
-                  }
-                : undefined
-            }
-          >
-            {/* Header */}
-            <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-3 mb-4">
-              <div>
-                {project.featured && (
-                  <span
-                    className="inline-block text-xs font-medium px-3 py-1 rounded-full mb-3"
-                    style={{
-                      color: "var(--accent)",
-                      background: "var(--accent-dim)",
-                      fontFamily: "var(--font-mono)",
-                      border: "1px solid rgba(100,255,218,0.15)",
-                    }}
-                  >
-                    ★ Featured Project
-                  </span>
-                )}
-                <h3
-                  className="text-lg md:text-xl font-semibold"
-                  style={{ color: "var(--text-heading)" }}
-                >
-                  {project.title}
-                </h3>
-                <p
-                  className="text-sm mt-1"
-                  style={{
-                    color: "var(--text-muted)",
-                    fontFamily: "var(--font-mono)",
-                    fontSize: "0.8rem",
-                  }}
-                >
-                  {project.subtitle}
-                </p>
-              </div>
-
-              {/* Links */}
-              {project.links && (
-                <div className="flex flex-wrap gap-2">
-                  {project.links.map((link) => (
-                    <a
-                      key={link.url}
-                      href={link.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1.5 text-xs px-3 py-1.5 rounded-md transition-all duration-200 hover:translate-y-[-1px]"
+        <div className="grid gap-6">
+          {projectsData.map((project, index) => (
+            <article
+              key={index}
+              className={`glass-card p-6 md:p-8 ${
+                project.featured
+                  ? "border-[var(--glass-border-hover)]"
+                  : ""
+              }`}
+              style={
+                project.featured
+                  ? {
+                      background:
+                        "linear-gradient(135deg, rgba(100,255,218,0.04) 0%, rgba(124,58,237,0.04) 100%)",
+                      borderColor: "var(--glass-border-hover)",
+                    }
+                  : undefined
+              }
+            >
+              {/* Header */}
+              <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-3 mb-4">
+                <div>
+                  {project.featured && (
+                    <span
+                      className="inline-block text-xs font-medium px-3 py-1 rounded-full mb-3"
                       style={{
                         color: "var(--accent)",
                         background: "var(--accent-dim)",
-                        border: "1px solid rgba(100,255,218,0.12)",
                         fontFamily: "var(--font-mono)",
+                        border: "1px solid rgba(100,255,218,0.15)",
                       }}
                     >
-                      <FiGlobe size={11} />
-                      {link.label}
-                      <FiExternalLink size={10} />
-                    </a>
-                  ))}
+                      ★ Featured Project
+                    </span>
+                  )}
+                  <h3
+                    className="text-lg md:text-xl font-semibold"
+                    style={{ color: "var(--text-heading)" }}
+                  >
+                    {project.title}
+                  </h3>
+                  <p
+                    className="text-sm mt-1"
+                    style={{
+                      color: "var(--text-muted)",
+                      fontFamily: "var(--font-mono)",
+                      fontSize: "0.8rem",
+                    }}
+                  >
+                    {project.subtitle}
+                  </p>
                 </div>
-              )}
-            </div>
 
-            {/* Bullets */}
-            <ul className="flex flex-col gap-2.5 mb-5">
-              {project.bullets.map((bullet, idx) => (
-                <li key={idx} className="flex gap-3 text-sm">
+                {/* Links */}
+                {project.links && (
+                  <div className="flex flex-wrap gap-2">
+                    {project.links.map((link) => (
+                      <a
+                        key={link.url}
+                        href={link.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1.5 text-xs px-3 py-1.5 rounded-md transition-all duration-200 hover:translate-y-[-1px]"
+                        style={{
+                          color: "var(--accent)",
+                          background: "var(--accent-dim)",
+                          border: "1px solid rgba(100,255,218,0.12)",
+                          fontFamily: "var(--font-mono)",
+                        }}
+                      >
+                        <FiGlobe size={11} />
+                        {link.label}
+                        <FiExternalLink size={10} />
+                      </a>
+                    ))}
+                  </div>
+                )}
+              </div>
+
+              {/* Bullets */}
+              <ul className="flex flex-col gap-2.5 mb-5">
+                {project.bullets.map((bullet, idx) => (
+                  <li key={idx} className="flex gap-3 text-sm">
+                    <span
+                      className="mt-2 flex-shrink-0 w-1.5 h-1.5 rounded-full"
+                      style={{ background: "var(--accent)" }}
+                    />
+                    <span style={{ color: "var(--text-secondary)" }}>{bullet}</span>
+                  </li>
+                ))}
+              </ul>
+
+              {/* Tech Stack */}
+              <div className="flex flex-wrap gap-2">
+                {project.techStack.map((tech) => (
                   <span
-                    className="mt-2 flex-shrink-0 w-1.5 h-1.5 rounded-full"
-                    style={{ background: "var(--accent)" }}
-                  />
-                  <span style={{ color: "var(--text-secondary)" }}>{bullet}</span>
-                </li>
-              ))}
-            </ul>
-
-            {/* Tech Stack */}
-            <div className="flex flex-wrap gap-2">
-              {project.techStack.map((tech) => (
-                <span
-                  key={tech}
-                  className="text-xs px-2.5 py-1 rounded"
-                  style={{
-                    color: "var(--text-muted)",
-                    background: "rgba(255,255,255,0.03)",
-                    border: "1px solid var(--glass-border)",
-                    fontFamily: "var(--font-mono)",
-                    fontSize: "0.72rem",
-                  }}
-                >
-                  {tech}
-                </span>
-              ))}
-            </div>
-          </article>
-        ))}
+                    key={tech}
+                    className="text-xs px-2.5 py-1 rounded"
+                    style={{
+                      color: "var(--text-muted)",
+                      background: "rgba(255,255,255,0.03)",
+                      border: "1px solid var(--glass-border)",
+                      fontFamily: "var(--font-mono)",
+                      fontSize: "0.72rem",
+                    }}
+                  >
+                    {tech}
+                  </span>
+                ))}
+              </div>
+            </article>
+          ))}
+        </div>
       </div>
     </section>
   );

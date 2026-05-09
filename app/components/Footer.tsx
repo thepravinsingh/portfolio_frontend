@@ -30,7 +30,7 @@ export default function Footer() {
       className="border-t"
       style={{ borderColor: "var(--glass-border)" }}
     >
-      <div className="max-w-[1200px] mx-auto px-6 lg:px-8 py-10 flex flex-col items-center gap-6">
+      <div className="layout-container py-10 flex flex-col items-center gap-6">
         {/* Social Links */}
         <div className="flex items-center gap-3">
           {socialLinks.map((social) => (

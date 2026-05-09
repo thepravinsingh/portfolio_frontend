@@ -52,7 +52,7 @@ export default function Navbar() {
       }}
     >
       <nav
-        className="max-w-[1200px] mx-auto flex items-center justify-between px-6 lg:px-8"
+        className="layout-container flex items-center justify-between"
         style={{ height: "72px" }}
         aria-label="Main navigation"
       >
